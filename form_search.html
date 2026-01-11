@@ -1,0 +1,18 @@
+
+		
+			<form action="index.php" name="search" id="search" method="get" onsubmit="return check_search();">
+			<fieldset>
+			<legend>&nbsp;Поиск&nbsp;</legend>
+			
+				<input type="hidden" name="action" value="search">
+				<label for="msg_crit">Искать в сообщениях:</label>
+				<input class="name" type="text" name="msg_crit" id="msg_crit" value="<?= htmlspecialchars($msg_crit, ENT_QUOTES); ?>" maxlength="64">
+				<br>
+				<label for="name_crit">От пользователя:</label>
+				<input class="name" type="text" name="name_crit" id="name_crit" value="<?= htmlspecialchars($name_crit, ENT_QUOTES); ?>" maxlength="33">
+				<br>
+				<label for="search_submit"></label>			 
+				<input class="submit" type='submit' id="search_submit" value='Найти'>
+			
+			</fieldset>
+			</form>

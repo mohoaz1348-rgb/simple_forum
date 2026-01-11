@@ -1,0 +1,26 @@
+			<form action="post_handlers/h_add_user.php" name="reg" id="reg" method="post" onsubmit="">
+			<fieldset>
+				<legend>&nbsp;Регистрация&nbsp;</legend>
+			
+			<script type="text/javascript"> idt=0; login_val=''; pwd_val=''; pwd2_val=''; </script>
+				<label for="login">Имя:</label>
+				<input class="name" autocomplete="off" type="text" name="login" id="login" value="" maxlength="33" onfocus="check_login_js('onfocus');" onblur="check_login_js('onblur');" onKeyUp="check_login_js('');"> 
+				<span class="star"> *</span> <span style="position: relative;"><span class="field_info" id="login_status"></span></span>
+				<br>
+				<label for="password">Пароль:</label>
+				<input class="name" type="password" name="password" id="password" value="" maxlength="12" onfocus="check_pwd('onfocus');" onblur="check_pwd('onblur');" onKeyUp="check_pwd('');">
+				<span class="star"> *</span> <span style="position: relative;"><span class="field_info" id="pwd_status"></span></span>
+				<br>
+				<label for="password2">Повторите пароль:</label>
+				<input class="name" type="password" name="password2" id="password2" value="" maxlength="12" onfocus="document.getElementById('pwd2_status').innerHTML=''" onblur="check_pwd2();">
+				<span class="star"> *</span> <span style="position: relative;"><span class="field_info" id="pwd2_status"></span></span>
+				<br>
+				<label for="email">E-mail:</label>
+				<input class="name" type="text" name="email" id="email" value="" maxlength="50" onfocus="document.getElementById('mail_status').innerHTML=''" onblur="check_mail();">
+				<span class="star"> *</span> <span style="position: relative;"><span class="field_info" id="mail_status"></span></span>
+				<br>
+				<label for="reg_b"></label>			 
+				<input class="submit" type="submit" id="reg_b" value="Отправить">
+			
+			</fieldset>
+			</form>

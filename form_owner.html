@@ -1,0 +1,14 @@
+		<form action="post_handlers/h_moderate.php?action=group" method="post" name="group" id="group">
+		<fieldset>
+			<legend>&nbsp;Группа пользователя&nbsp;</legend>
+			
+			<input type="hidden" name="uid" value="<?php echo $id_user; ?>">
+			<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+			
+			<select id="group" name="group" onchange="submit();">
+			<option value="user" <?php if (($row->user_group) == "user") { echo "selected"; } ?>>Пользователь
+			<option value="moderator" <?php if (($row->user_group) == "moderator") { echo "selected"; } ?>>Модератор
+			</select>
+
+		</fieldset>
+		</form>

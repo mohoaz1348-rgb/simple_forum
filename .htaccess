@@ -1,0 +1,7 @@
+Order deny,allow
+Deny from all
+
+<FilesMatch "index\.php|ajax\.php">
+  Allow from all
+</FilesMatch>
+

@@ -1,0 +1,12 @@
+		<form action="post_handlers/h_moderate.php?action=ban" method="post" name="ban" id="ban" onsubmit="return check_ban();">
+		<fieldset>
+			<legend>&nbsp;Ограничение доступа&nbsp;</legend>
+			
+			<input type="hidden" name="uid" value="<?php echo $id_user; ?>">
+			<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+			
+			Забанить на <input class="name" type="text" name="days" id="days" value="" maxlength="4"> суток
+			
+			<input class="submit" type="submit" id="ban_submit" value="Сохранить">
+		</fieldset>
+		</form>

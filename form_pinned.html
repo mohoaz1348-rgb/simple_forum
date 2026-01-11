@@ -1,0 +1,12 @@
+
+			<form action="post_handlers/h_moderate.php?action=pin" name="f_pin" id="f_pin" method="post" onsubmit="">
+			<fieldset>
+			<legend>&nbsp;Пришпилить тему&nbsp;</legend>
+
+				<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+				<input type="hidden" name="topic" value="<?php echo $topic; ?>">
+
+				<input type="checkbox" name="pin" id="pin" value="pinned" <?= $is_pinned; ?> onchange="submit();"> Пришпилена
+			
+			</fieldset>
+			</form>

@@ -1,0 +1,14 @@
+		<form action="post_handlers/h_post.php?action=title" method="post" name="edit_title" id="edit_title" onsubmit="return check_new_topic();">
+		<fieldset>
+			<legend>&nbsp;Изменить название темы&nbsp;</legend>
+			
+			<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+			<input type="hidden" name="topic" value="<?php echo $topic; ?>">
+			
+			<input class="name" type="text" name="title" id="title" value="<?php echo htmlspecialchars($theme, ENT_QUOTES); ?>" maxlength="80">
+			<span class="star"> *</span>
+			<br>
+
+			<input class="submit" type="submit" id="submit" value="Сохранить">
+		</fieldset>
+		</form>

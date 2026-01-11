@@ -1,0 +1,11 @@
+CREATE DATABASE forum_test DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+CREATE TABLE posts (id_post int(11) NOT NULL AUTO_INCREMENT, id_user int(11), id_editor int(11), username varchar(100), msg text, msg_search text, time datetime DEFAULT NULL, last_edit datetime DEFAULT NULL, remote_addr varchar(20), http_info text, id_topic int(11) NOT NULL REFERENCES topics, title_topic text, active int(1) DEFAULT 1, PRIMARY KEY (id_post)) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+MSG_SEARCH text collate utf8mb4_general_ci - это сообщение с удалёнными пользовательскими тэгами (удаляются только те тэги, которые будут заменены на тэги html.
+
+
+CREATE TABLE users (id_user int(11) NOT NULL AUTO_INCREMENT, username varchar(100) collate utf8mb4_general_ci,  password text, email varchar(200), time datetime DEFAULT NULL, user_group varchar(100) collate utf8mb4_general_ci, active int(1) default 0, banned_till datetime DEFAULT NULL, ignore_list text, PRIMARY KEY (id_user)) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+CREATE TABLE topics (id_topic int(11) NOT NULL AUTO_INCREMENT, title text, id_user int(11), author varchar(100), update_time datetime DEFAULT NULL, active int(1) DEFAULT 1, pinned int(1) DEFAULT 0, closed int(1) DEFAULT 0, PRIMARY KEY (id_topic)) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

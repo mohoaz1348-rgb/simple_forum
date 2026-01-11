@@ -1,0 +1,24 @@
+		<form action="post_handlers/h_post.php?action=newtopic" method="post" name="gb" id="gb" onsubmit="return check_new_topic();">
+		<fieldset>
+			<legend>&nbsp;Создать новую тему&nbsp;</legend>
+			
+			<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+			
+			<input class="name" type="text" name="title" id="title" value="" maxlength="80">
+			<span class="star"> *</span>
+			<br>
+			
+			<ul id="editor">
+			<li id="b1"><a href="#" title="Жирный" onclick="insert_text('[b]','[/b]'); return false;">Жирный</a></li>
+			<li id="b2"><a href="#" title="Курсив" onclick="insert_text('[i]','[/i]'); return false;">Курсив</a></li>
+			<li id="b3"><a href="#" title="Гиперссылка" onclick="insert_text('[url=]','[/url]'); return false;">Гиперссылка</a></li>
+			<li id="b4"><a href="#" title="Цитата" onclick="insert_text('[q=]','[/q]'); return false;">Цитата</a></li>
+			</ul>
+	
+			<textarea class="msg" name="comment" id="msg" rows="10" cols="60"></textarea>
+			<span class="star"> *</span>
+			<br>
+
+			<input class="submit" type="submit" id="submit" value="Отправить">
+		</fieldset>
+		</form>

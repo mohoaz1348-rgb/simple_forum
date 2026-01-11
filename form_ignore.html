@@ -1,0 +1,12 @@
+			<form action="post_handlers/h_profile.php?action=ignore" name="f_ignore" id="f_ignore" method="post" onsubmit="">
+			<fieldset>
+			<legend>&nbsp;Игнорировать пользователя&nbsp;</legend>
+
+				<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+				<input type="hidden" name="uid" value="<?php echo $_SESSION['id_user']; ?>">
+				<input type="hidden" name="ignored_user" value="<?php echo $row->id_user; ?>">
+
+				<input type="checkbox" name="ignore" id="ignore" value="ignored" <?= $is_ignored; ?> onchange="submit();"> Игнорировать пользователя
+			
+			</fieldset>
+			</form>

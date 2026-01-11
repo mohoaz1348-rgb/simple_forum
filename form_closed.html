@@ -1,0 +1,12 @@
+
+			<form action="post_handlers/h_moderate.php?action=close" name="f_close" id="f_close" method="post" onsubmit="">
+			<fieldset>
+			<legend>&nbsp;Закрыть тему&nbsp;</legend>
+
+				<input type="hidden" name="sid" value="<?php echo session_id(); ?>">
+				<input type="hidden" name="topic" value="<?php echo $topic; ?>">
+
+				<input type="checkbox" name="close" id="close" value="closed" <?= $is_closed; ?> onchange="submit();"> Закрыта
+			
+			</fieldset>
+			</form>
